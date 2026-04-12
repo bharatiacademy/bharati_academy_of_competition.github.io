@@ -311,83 +311,139 @@ footer{
 
 /* ─── RESPONSIVE: MOBILE ─── */
 @media(max-width:600px){
-  /* Header */
-  header{padding:12px 14px;gap:10px;}
-  .logo-ring{width:60px;height:60px;padding:5px;}
-  .inst-name{font-size:15px;}
-  .bac-abbr{font-size:8px;letter-spacing:3px;}
-  .inst-sub{font-size:8px;letter-spacing:1px;}
-  .since-box{padding:6px 10px;}
-  .since-box .s2{font-size:16px;}
-  .since-box .s1,.since-box .s3{font-size:7px;}
 
-  /* Hero */
-  .hero{padding:24px 14px 18px;}
-  .now-enrolling{font-size:9px;padding:5px 12px;letter-spacing:2px;}
-  .admissions-title{font-size:24px;letter-spacing:2px;margin-bottom:12px;}
-  .session-badge{font-size:10px;padding:7px 16px;letter-spacing:2px;}
-  .hero-cats{font-size:9px;letter-spacing:1px;flex-wrap:wrap;justify-content:center;gap:4px;}
+  /* ── Header ── */
+  header{
+    padding:12px 14px;gap:10px;
+    flex-wrap:nowrap;align-items:center;
+  }
+  .logo-ring{width:56px;height:56px;padding:4px;}
+  .bac-abbr{font-size:8px;letter-spacing:3px;margin-bottom:2px;}
+  .inst-name{font-size:14px;line-height:1.15;}
+  .inst-sub{font-size:8px;letter-spacing:1px;margin-top:3px;}
+  .since-box{padding:6px 10px;flex-shrink:0;}
+  .since-box .s1,.since-box .s3{font-size:7px;letter-spacing:1px;}
+  .since-box .s2{font-size:16px;}
+
+  /* ── Hero ── */
+  .hero{padding:22px 14px 16px;}
+  .now-enrolling{font-size:9px;padding:4px 12px;letter-spacing:2px;margin-bottom:14px;}
+  .admissions-title{font-size:22px;letter-spacing:1.5px;margin-bottom:12px;}
+  .session-badge{font-size:10px;padding:7px 18px;letter-spacing:1.5px;margin-bottom:14px;}
+  .hero-cats{font-size:9px;letter-spacing:1px;flex-wrap:wrap;gap:4px 0;}
   .hero-cats .sep{margin:0 6px;}
 
-  /* Section label */
-  .sec-label{padding:0 14px 12px;font-size:8px;}
+  /* ── Section Label ── */
+  .sec-label{padding:0 14px 12px;font-size:8px;letter-spacing:3px;}
 
-  /* Course grid — 2 columns on mobile */
+  /* ── Course Grid: 2 columns ── */
   .programs{padding:0 10px 14px;}
-  .course-grid{grid-template-columns:repeat(2,1fr);gap:10px;}
-  .ccard-top{padding:10px 12px 8px;}
-  .ccard-body{padding:8px 12px;}
+  .course-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .ccard{border-radius:8px;}
+  .ccard-top{padding:10px 10px 7px;gap:7px;}
+  .ccard-icon{font-size:15px;}
   .ccard-stream{font-size:11px;}
   .ccard-sub{font-size:8px;}
-  .subj-list li{font-size:10px;}
+  .ccard-body{padding:8px 10px;}
+  .subj-list{gap:4px;}
+  .subj-list li{font-size:10px;gap:5px;}
+  .subj-list li::before{width:4px;height:4px;}
+  .entrance-items{gap:5px;}
+  .e-item{padding:7px 9px;}
   .e-item .e-name{font-size:12px;}
   .e-item .e-desc{font-size:8px;}
-  .e-item{padding:7px 10px;}
 
-  /* Mode strip */
+  /* ── Mode Strip ── */
   .mode-strip{
-    margin:0 10px 12px;padding:10px 12px;gap:8px;
-    font-size:10px;flex-wrap:wrap;
+    margin:0 10px 12px;padding:10px 14px;
+    gap:6px 14px;font-size:10px;flex-wrap:wrap;
+    justify-content:flex-start;
   }
   .mode-strip .vsep{display:none;}
+  .mode-strip .dot{width:6px;height:6px;margin-right:5px;}
 
-  /* Topper strip */
-  .topper-strip{margin:0 10px 12px;padding:10px 14px;font-size:11px;}
-
-  /* Bottom grid */
-  .bottom-grid{margin:0 10px 12px;grid-template-columns:1fr;gap:10px;}
-  .contact-card{padding:14px 16px;}
-  .cc-label{font-size:9px;}
-  .cc-txt{font-size:11px;}
-
-  /* QR sections — keep side-by-side, shrink QR frame */
-  .wa-qr-section,.ig-qr-section,.alumni-qr-section{
-    margin:0 10px 12px;
-    padding:14px 12px;
-    flex-direction:row;
-    align-items:center;
-    gap:12px;
+  /* ── Topper Strip ── */
+  .topper-strip{
+    margin:0 10px 12px;padding:10px 14px;
+    font-size:11px;line-height:1.6;
   }
-  .wa-left,.ig-left,.alumni-left{flex:1;min-width:0;}
-  .wa-right,.ig-right,.alumni-right{flex-shrink:0;}
-  .wa-qr-frame,.ig-qr-frame,.alumni-qr-frame{width:100px;height:100px;padding:5px;border-radius:8px;}
-  .wa-qr-wrap,.ig-qr-wrap,.alumni-qr-wrap{padding:2px;}
-  .wc,.ic,.ac{width:10px;height:10px;}
+  .trophy{font-size:16px;}
+
+  /* ── Contact Grid: single column ── */
+  .bottom-grid{
+    margin:0 10px 12px;
+    grid-template-columns:1fr;gap:10px;
+  }
+  .contact-card{padding:14px 16px;border-radius:10px;}
+  .cc-label{font-size:9px;letter-spacing:2px;margin-bottom:10px;}
+  .cc-row{gap:8px;margin-bottom:8px;}
+  .cc-ico{width:22px;height:22px;font-size:11px;border-radius:6px;}
+  .cc-txt{font-size:11px;line-height:1.55;}
+  .cc-txt small{font-size:8.5px;}
+
+  /* ── QR Sections: stacked (text top, QR bottom) ── */
+  .wa-qr-section,
+  .ig-qr-section,
+  .alumni-qr-section{
+    margin:0 10px 12px;
+    padding:16px 14px;
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+    border-radius:12px;
+  }
+
+  /* Left text block */
+  .wa-left,.ig-left,.alumni-left{width:100%;}
+  .wa-badge,.ig-badge,.alumni-badge{
+    font-size:9px;padding:4px 12px;
+    letter-spacing:1.5px;margin-bottom:8px;
+  }
+  .wa-title,.ig-title,.alumni-title{
+    font-size:16px;margin-bottom:6px;line-height:1.25;
+  }
+  .wa-desc,.ig-desc,.alumni-desc{
+    font-size:10.5px;line-height:1.65;margin-bottom:10px;
+  }
+  .wa-tags,.ig-tags,.alumni-tags{
+    gap:5px;margin-bottom:10px;flex-wrap:wrap;
+  }
+  .wa-tags span,.ig-tags span,.alumni-tags span{
+    font-size:9px;padding:3px 10px;
+  }
+  .wa-number,.ig-handle,.alumni-link{font-size:11px;}
+
+  /* Right QR block: centred below text */
+  .wa-right,.ig-right,.alumni-right{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+  }
+  .wa-scan-label,.ig-scan-label,.alumni-scan-label{
+    font-size:8px;letter-spacing:1.5px;
+  }
+  .wa-qr-wrap,.ig-qr-wrap,.alumni-qr-wrap{padding:3px;}
+  .wc,.ic,.ac{width:12px;height:12px;}
   .wc.tl,.ic.tl,.ac.tl{border-width:2px 0 0 2px;}
   .wc.tr,.ic.tr,.ac.tr{border-width:2px 2px 0 0;}
   .wc.bl,.ic.bl,.ac.bl{border-width:0 0 2px 2px;}
   .wc.br,.ic.br,.ac.br{border-width:0 2px 2px 0;}
-  .wa-title,.ig-title,.alumni-title{font-size:13px;margin-bottom:5px;}
-  .wa-badge,.ig-badge,.alumni-badge{font-size:8px;padding:3px 10px;letter-spacing:1px;margin-bottom:6px;}
-  .wa-desc,.ig-desc,.alumni-desc{font-size:9.5px;line-height:1.5;margin-bottom:8px;}
-  .wa-tags,.ig-tags,.alumni-tags{gap:4px;margin-bottom:8px;}
-  .wa-tags span,.ig-tags span,.alumni-tags span{font-size:8.5px;padding:2px 8px;}
-  .wa-number,.ig-handle,.alumni-link{font-size:10px;}
-  .wa-scan-label,.ig-scan-label,.alumni-scan-label{font-size:7px;}
-  .wa-scan-hint,.ig-scan-hint,.alumni-scan-hint{font-size:7px;}
+  .wa-qr-frame,.ig-qr-frame,.alumni-qr-frame{
+    width:150px;height:150px;padding:7px;border-radius:10px;
+  }
+  .wa-scan-hint,.ig-scan-hint,.alumni-scan-hint{
+    font-size:8px;letter-spacing:0.3px;
+  }
 
-  /* Footer */
-  footer{padding:12px 14px;flex-direction:column;gap:5px;text-align:center;font-size:9px;}
+  /* ── Footer ── */
+  footer{
+    padding:12px 14px;
+    flex-direction:column;gap:5px;text-align:center;
+    font-size:9px;letter-spacing:1px;
+  }
+  .ft-center{font-size:10px;gap:6px;}
 }
 </style>
 </head>
@@ -591,7 +647,8 @@ footer{
       <div class="cc-ico ico-g">📧</div>
       <div class="cc-txt">
         <small>Email</small>
-        <a href="/cdn-cgi/l/email-protection#2f4d474e5d4e5b464e4c4e4b4a42561d1f1f1b6f48424e4643014c4042" style="color:inherit;text-decoration:none;"><span class="__cf_email__" data-cfemail="c7a5afa6b5a6b3aea6a4a6a3a2aabef5f7f7f387a0aaa6aeabe9a4a8aa">[email&#160;protected]</span></a><br><a href="/cdn-cgi/l/email-protection#a0c2c8c1d2c1d4c9c1c3c1c4c5cdd992909292e0c7cdc1c9cc8ec3cfcd" style="color:inherit;text-decoration:none;"><span class="__cf_email__" data-cfemail="dbb9b3baa9baafb2bab8babfbeb6a2e9ebe9e99bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></a>
+        <a href="mailto:bharatiacademy2004@gmail.com" style="color:inherit;text-decoration:none;">bharatiacademy2004@gmail.com</a><br>
+        <a href="mailto:bharatiacademy2022@gmail.com" style="color:inherit;text-decoration:none;">bharatiacademy2022@gmail.com</a>
       </div>
     </div>
     <div class="cc-row">
